@@ -1,0 +1,132 @@
+GENERICAS
+
+- Code Runner
+Permite ejecutar fragmentos de código de múltiples lenguajes (como Python, 
+JavaScript, PHP, Java, entre otros) directamente en el editor. 
+
+- Better Comments
+Mejora la legibilidad de los comentarios en el código mediante diferentes colores y estilos, 
+facilitando la distinción entre comentarios importantes, preguntas, alertas, y más.
+
+- Indent-Rainbow
+Colorea las sangrías en tu código para hacer más fácil la identificación de niveles de 
+anidación, mejorando la legibilidad y evitando errores de indentación.
+
+- Path Intellisense
+Ofrece autocompletado inteligente de rutas de archivos y directorios, agilizando la navegación 
+y el trabajo con archivos dentro de tu proyecto.
+
+- Image Preview
+Permite previsualizar imágenes directamente en el editor al abrir archivos de imagen o pasar 
+el cursor sobre rutas de imágenes en el código.
+
+- Prettier - Code formatter
+Formatea el código automáticamente según reglas de estilo definidas, asegurando un código 
+limpio y consistente en diferentes lenguajes y proyectos.
+
+- Live Share (Colaborativa)
+Facilita la colaboración en tiempo real permitiendo compartir tu entorno de desarrollo con 
+otros, permitiendo editar y depurar conjuntamente.
+
+- Peacock
+Permite cambiar el color de fondo de tu espacio de trabajo en VSCode, útil para distinguir 
+entre múltiples proyectos abiertos simultáneamente.
+
+- CodeSnap
+Permite tomar capturas de pantalla del código con estilo visual mejorado, ideal para compartir 
+fragmentos de código en redes sociales o documentación.
+
+- One Dark Pro
+Un popular tema de color oscuro para VSCode, inspirado en el tema de Atom One Dark, que mejora 
+la experiencia visual del editor.
+
+- Fluent Icons
+Proporciona un conjunto de íconos modernos y atractivos basados en el diseño Fluent de 
+Microsoft, mejorando la apariencia de la barra lateral y los paneles de VSCode.
+
+- Symbols
+Permite navegar rápidamente por símbolos del código (como funciones, variables, clases) 
+mediante una lista desplegable, mejorando la navegación y el entendimiento del código.
+
+- Auto-Collapse Folders (opcional)
+Automatiza el colapso de carpetas en el Explorador de VSCode al abrir un archivo o cambiar de proyecto, manteniendo el 
+árbol de archivos organizado y evitando la expansión excesiva de directorios.
+
+- Better Align
+Facilita la alineación de código mediante comandos que permiten alinear asignaciones, declaraciones y otros fragmentos de código, 
+mejorando la legibilidad y el mantenimiento del código.
+
+- Error Lens
+Resalta los errores, advertencias y otros problemas directamente en el editor, mostrando mensajes de error en línea con el 
+código para una depuración más rápida y eficiente.
+
+- Format in context menus
+Añade opciones de formateo de código a los menús contextuales (clic derecho) en VSCode, permitiendo formatear archivos o 
+secciones de código de manera rápida y sencilla sin necesidad de usar atajos de teclado.
+
+- Git Graph
+Proporciona una visualización gráfica interactiva del historial de Git, permitiendo explorar y gestionar commits, ramas y 
+etiquetas de manera intuitiva dentro de VSCode.
+
+- Material Icon Theme
+Cambia el tema de íconos de VSCode a uno basado en Material Design, ofreciendo una apariencia moderna y consistente 
+para los archivos y carpetas del proyecto, mejorando la experiencia visual del usuario.
+
+
+
+ANGULAR
+
+- Angular Essentials
+Un paquete que incluye varias extensiones recomendadas para el desarrollo de Angular, tales 
+como Angular Language Service, Angular Snippets, y más.
+
+- Angular Language Service
+Proporciona autocompletado, verificación de errores y sugerencias dentro de los archivos HTML 
+y TypeScript de un proyecto Angular.
+
+- Angular Snippets
+Ofrece fragmentos de código predefinidos para Angular, agilizando la escritura de componentes, 
+directivas, servicios, módulos, y otros elementos comunes de Angular.
+
+- Angular Files
+Permite crear rápidamente archivos y carpetas de Angular (componentes, servicios, módulos, etc.) 
+con un esquema predefinido, simplificando la estructura del proyecto.
+
+- Nx Console
+Para aquellos que usan Nx (un conjunto de herramientas para monorepositorios de Angular), esta extensión 
+proporciona una interfaz gráfica para administrar el proyecto y ejecutar comandos.
+
+- ESLint
+Integra ESLint para analizar y corregir problemas de estilo y errores en tu código TypeScript y JavaScript.
+
+- Live Server
+Permite lanzar un servidor de desarrollo local con recarga en vivo para probar tus aplicaciones Angular rápidamente.
+
+- GitLens
+Aunque no es específica de Angular, esta extensión mejora la integración con Git, proporcionando una visión 
+clara del historial de commits, autores y cambios en el código.
+
+- Bracket Pair Colorizer
+Colorea los pares de corchetes y llaves, facilitando la identificación de bloques de código en tus archivos TypeScript y HTML.
+
+
+
+Extensiones para visual (backend-java)
+- Extension Pack for java
+- Language Support for java
+- Debugger for java
+- Test runner for java
+- Maven for java
+- Project Manager for java
+- Gradle for java
+- IntelliCode
+- Spring Boot Extension Pack
+- Spring Boot Tools
+- Spring Initializr java Support
+- Spring Boot Dashboard
+- Spring Code Generator
+- XML
+- Rainbow Tags
+- Path Intellisense
+- Lombok Annotations Support for VS Code
+
