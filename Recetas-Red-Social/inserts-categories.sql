@@ -1,0 +1,21 @@
+INSERT INTO Categories (category_name) VALUES ('Desayuno');
+INSERT INTO Categories (category_name) VALUES ('Almuerzo');
+INSERT INTO Categories (category_name) VALUES ('Cena');
+INSERT INTO Categories (category_name) VALUES ('Aperitivos');
+INSERT INTO Categories (category_name) VALUES ('Entrantes');
+INSERT INTO Categories (category_name) VALUES ('Platos principales');
+INSERT INTO Categories (category_name) VALUES ('Postres');
+INSERT INTO Categories (category_name) VALUES ('Vegetariano');
+INSERT INTO Categories (category_name) VALUES ('Vegano');
+INSERT INTO Categories (category_name) VALUES ('Sin gluten');
+INSERT INTO Categories (category_name) VALUES ('Bajo en calorías');
+INSERT INTO Categories (category_name) VALUES ('Rápido y fácil');
+INSERT INTO Categories (category_name) VALUES ('Internacional');
+INSERT INTO Categories (category_name) VALUES ('Italiano');
+INSERT INTO Categories (category_name) VALUES ('Mexicano');
+INSERT INTO Categories (category_name) VALUES ('Asiático');
+INSERT INTO Categories (category_name) VALUES ('Mediterráneo');
+INSERT INTO Categories (category_name) VALUES ('Comida rápida');
+INSERT INTO Categories (category_name) VALUES ('Comida saludable');
+INSERT INTO Categories (category_name) VALUES ('Comida para niños');
+

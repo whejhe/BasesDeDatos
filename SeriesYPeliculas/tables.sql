@@ -1,3 +1,29 @@
+-- DROP TABLE IF EXISTS series_genres;
+-- DROP TABLE IF EXISTS movie_genres;
+-- DROP TABLE IF EXISTS series_platforms;
+-- DROP TABLE IF EXISTS movie_platforms;
+-- DROP TABLE IF EXISTS platforms;
+-- DROP TABLE IF EXISTS series_people;
+-- DROP TABLE IF EXISTS movie_people;
+-- DROP TABLE IF EXISTS people;
+-- DROP TABLE IF EXISTS view_history;
+-- DROP TABLE IF EXISTS playlist_series;
+-- DROP TABLE IF EXISTS playlist_movies;
+-- DROP TABLE IF EXISTS playlists;
+-- DROP TABLE IF EXISTS ratings;
+-- DROP TABLE IF EXISTS comments;
+-- DROP TABLE IF EXISTS favorite_movie;
+-- DROP TABLE IF EXISTS favorite_series;
+-- DROP TABLE IF EXISTS user_series;
+-- DROP TABLE IF EXISTS user_movies;
+-- DROP TABLE IF EXISTS users;
+-- DROP TABLE IF EXISTS episodes;
+-- DROP TABLE IF EXISTS series;
+-- DROP TABLE IF EXISTS movies;
+-- DROP TABLE IF EXISTS genres;
+
+-- DROP DATABASE whejheVision;
+
 CREATE DATABASE IF NOT EXISTS whejheVision;
 
 USE whejheVision;
@@ -17,7 +43,7 @@ CREATE TABLE IF NOT EXISTS movies (
     duration INT,  -- Duración en minutos
     synopsis TEXT, -- Sinopsis de la película
     original_language VARCHAR(255),
-    subtitles VARCHAR(255),
+    subtitles_language VARCHAR(255),
     image_url VARCHAR(255),
     PRIMARY KEY (id),
     FOREIGN KEY (genre_id) REFERENCES genres(id)
@@ -30,7 +56,7 @@ CREATE TABLE IF NOT EXISTS series (
     genre_id INT NOT NULL,
     synopsis TEXT, -- Sinopsis de la serie
     original_language VARCHAR(255),
-    subtitles VARCHAR(255),
+    subtitles_language VARCHAR(255),
     image_url VARCHAR(255),
     PRIMARY KEY (id),
     FOREIGN KEY (genre_id) REFERENCES genres(id)
@@ -57,6 +83,9 @@ CREATE TABLE IF NOT EXISTS users (
     avatar_url VARCHAR(255),
     password VARCHAR(255) NOT NULL,
     role VARCHAR(50) NOT NULL DEFAULT 'user', -- Rol del usuario, por defecto 'user'
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    reset_token VARCHAR(255),
+    reset_token_expires_at DATETIME,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
@@ -104,6 +133,7 @@ CREATE TABLE IF NOT EXISTS comments (
     movie_id INT, -- Puede ser NULL si el comentario es para una serie
     series_id INT, -- Puede ser NULL si el comentario es para una película
     episode_id INT, -- Puede ser NULL si el comentario es para una película o serie completa
+    parent_id INT,
     comment TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
@@ -121,6 +151,7 @@ CREATE TABLE IF NOT EXISTS ratings (
     series_id INT,
     rating INT NOT NULL,
     review TEXT,
+    update_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (movie_id) REFERENCES movies(id),
@@ -233,6 +264,7 @@ CREATE TABLE IF NOT EXISTS movie_genres (
     id INT NOT NULL AUTO_INCREMENT,
     movie_id INT NOT NULL,
     genre_id INT NOT NULL,
+    is_primary BOOLEAN NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (movie_id) REFERENCES movies(id),
     FOREIGN KEY (genre_id) REFERENCES genres(id)
@@ -242,6 +274,7 @@ CREATE TABLE IF NOT EXISTS series_genres (
     id INT NOT NULL AUTO_INCREMENT,
     series_id INT NOT NULL,
     genre_id INT NOT NULL,
+    is_primary BOOLEAN NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (series_id) REFERENCES series(id),
     FOREIGN KEY (genre_id) REFERENCES genres(id)
