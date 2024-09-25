@@ -1,0 +1,17 @@
+DockerHub (Usando contenedores podman): https://hub.docker.com/
+
+Oracle Cloud: https://www.oracle.com/es/cloud/
+
+Planet Scale (SQL):  https://auth.planetscale.com/sign-in
+
+Supabase: https://supabase.com/dashboard/projects
+
+Neon: https://neon.tech/
+
+Cloud SQL: https://cloud.google.com/sql?hl=es
+
+Railway: https://railway.app/new
+
+Render: https://dashboard.render.com/
+
+Vercel: https://vercel.com/docs/storage/vercel-postgres

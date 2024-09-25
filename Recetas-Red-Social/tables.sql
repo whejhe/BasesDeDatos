@@ -1,3 +1,18 @@
+-- Eliminar tablas si ya existen
+DROP TABLE IF EXISTS Comments;
+DROP TABLE IF EXISTS Ratings;
+DROP TABLE IF EXISTS Recipe_Ingredients;
+DROP TABLE IF EXISTS Recipe_Categories;
+DROP TABLE IF EXISTS Followers;
+DROP TABLE IF EXISTS Ingredients;
+DROP TABLE IF EXISTS Categories;
+DROP TABLE IF EXISTS Recipes;
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Ingredient_Types;
+
+DROP DATABASE IF EXISTS Recetas;
+
+-- Crear base de datos
 CREATE DATABASE Recetas;
 USE Recetas;
 CREATE TABLE User (
@@ -17,10 +32,10 @@ CREATE TABLE Recipes(
     instructions TEXT NOT NULL,
     cooking_time INT,
     original_country VARCHAR(50),
-    category VARCHAR(50) NOT NULL,
     is_public BOOLEAN DEFAULT TRUE,
     image_url VARCHAR(255),
     video_url VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES User(user_id)
 );
 CREATE TABLE Ingredients(
@@ -33,7 +48,8 @@ CREATE TABLE Ingredients(
 CREATE TABLE Recipe_Ingredients(
     recipe_id INT NOT NULL,
     ingredient_id INT NOT NULL,
-    quantity VARCHAR(50) NOT NULL,
+    quantity DECIMAL(10, 2) NOT NULL,
+    unit VARCHAR(50) NOT NULL,
     PRIMARY KEY (recipe_id, ingredient_id),
     FOREIGN KEY (recipe_id) REFERENCES Recipes(recipe_id),
     FOREIGN KEY (ingredient_id) REFERENCES Ingredients(ingredient_id)
