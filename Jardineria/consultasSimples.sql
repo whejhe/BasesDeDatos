@@ -80,7 +80,4 @@ JOIN gama_producto gp ON p.gama = gp.gama
 WHERE gp.gama = 'Ornamentales' AND p.cantidad_en_stock > 100
 ORDER BY p.precio_venta DESC;
 -- 16.	Devuelve un listado con todos los clientes que sean de la ciudad de Madrid y cuyo representante de ventas tenga el código de empleado 11 o 30.
-SELECT c.*
-FROM cliente c
-JOIN empleado e ON c.codigo_empleado_rep_ventas = e.codigo_empleado
-WHERE c.ciudad = 'Madrid' AND e.codigo_empleado IN (11, 30);
+SELECT c.* FROM cliente c JOIN empleado e ON c.codigo_empleado_rep_ventas = e.codigo_empleado WHERE c.ciudad = 'Madrid' AND e.codigo_empleado IN (11, 30);
