@@ -7,7 +7,7 @@ SELECT COUNT(*) FROM empleado;
 SELECT pais, COUNT(*) FROM cliente GROUP BY pais;
 
 -- 3.	¿Cuál fue el pago medio en 2009?
-SELECT AVG(total) FROM pago WHERE fecha_pago BETWEEN '2009-01-01' AND '2009-12-31';
+SELECT ROUND(AVG(total),2) As promedio FROM pago WHERE fecha_pago BETWEEN '2009-01-01' AND '2009-12-31';
 
 -- 4.	¿Cuántos pedidos hay en cada estado? Ordena el resultado de 
 --      forma descendente por el número de pedidos.
@@ -18,7 +18,7 @@ SELECT estado, COUNT(*) FROM pedido GROUP BY estado ORDER BY COUNT(*) DESC;
 SELECT MAX(precio_venta) AS precio_max, MIN(precio_venta) AS precio_min FROM producto;
 
 -- 6.	Calcula el número de clientes que tiene la empresa.
-SELECT COUNT(*) FROM cliente;
+SELECT COUNT(*) As num_clientes FROM cliente;
 
 -- 7.	¿Cuántos clientes tiene la ciudad de Madrid?
 SELECT COUNT(*) FROM cliente WHERE ciudad = 'Madrid';
